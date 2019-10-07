@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { color, fontSize, space } from 'styled-system';
 import { buttons } from '../../styles/variables/buttons';
-import { base } from '../../styles/helpers/system';
+import { baseCSS } from '../../styles/helpers/system';
 
 // TO REMOVE START
 import { button } from 'Variables';
@@ -56,7 +56,7 @@ export const Button = styled('button')`
 
   ${({ disabled }) => disabled && `cursor: not-allowed;`}
 
-  ${bass}
+  ${baseCSS}
   ${buttonSizeCSS}
 `;
 
