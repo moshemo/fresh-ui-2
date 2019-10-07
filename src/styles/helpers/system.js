@@ -1,10 +1,3 @@
-import {
-  css,
-  color,
-  flexbox,
-  fontSize,
-  space,
-  typography
-} from 'styled-system';
+import { css, color, flexbox, layout, space, typography } from 'styled-system';
 
 export const base = css(color, flexbox, layout, space, typography);
