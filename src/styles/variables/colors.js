@@ -1,16 +1,7 @@
-import { material } from '../helpers/material-colors';
-import { accentArray, colorObject } from '../helpers/functions';
-
-const grey = colorObject('grey', 'm600');
-const primary = colorObject('green', 'm300');
-const secondary = colorObject('purple', 'm600');
-const tertiary = colorObject('yellow', 'm300');
-
-const accent = accentArray('orange');
-// const accent = Object.values(material.orange.accent)
+import { material } from "../helpers/material-colors";
 
 export const colors = {
-  primary: material.green.m300,
+  primary: material.blue.m700,
   secondary: material.purple.m600,
   tertiary: material.yellow.m300,
   accent: material.orange.accent.a400,
@@ -20,12 +11,13 @@ export const colors = {
   light: material.grey.m100,
 
   dark: material.grey.m800,
-  black: material.grey.m900,
+  offBlack: material.grey.m900,
+  black: material.shades.black,
 
-  info: material.blue.m400,
-  error: material.red.m400,
+  info: material.blue.m700,
+  error: material.red.m700,
   success: material.green.m400,
-  warning: material.yellow.m400,
+  warning: material.yellow.m700,
 
   code: material.red.m500,
 
@@ -45,3 +37,40 @@ export const colors = {
     active: material.grey.m800
   }
 };
+
+// export const colors = {
+//       primary: '#abcdef',
+//   secondary: '#abcdef',
+//   tertiary: '#abcdef',
+//   accent: '#abcdef',
+
+//   white: '#abcdef',
+//   offWhite: '#abcdef',
+//   light: '#abcdef',
+
+//   dark: '#abcdef',
+//   black: '#abcdef',
+
+//   info: '#abcdef',
+//   error: '#abcdef',
+//   success: '#abcdef',
+//   warning: '#abcdef',
+
+//   code: '#abcdef',
+
+//   on: {
+//     primary: '#abcdef',
+//     secondary: '#abcdef',
+//     background: '#abcdef',
+//     surface: '#abcdef',
+//     error: '#abcdef',
+//   },
+
+//   link: {
+//     base: '#abcdef',
+//     visited: '#abcdef',
+//     hover: '#abcdef',
+//     focus: '#abcdef',
+//     active: '#abcdef',
+//   },
+// }
