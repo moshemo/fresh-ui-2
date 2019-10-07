@@ -1,20 +1,19 @@
-import { material } from '../helpers/material-colors'
-import { accentArray, colorObject } from '../helpers/functions'
+import { material } from '../helpers/material-colors';
+import { accentArray, colorObject } from '../helpers/functions';
 
-const grey = colorObject('grey', 'm600')
-const primary = colorObject('green', 'm300')
-const secondary = colorObject('purple', 'm600')
-const tertiary = colorObject('yellow', 'm300')
+const grey = colorObject('grey', 'm600');
+const primary = colorObject('green', 'm300');
+const secondary = colorObject('purple', 'm600');
+const tertiary = colorObject('yellow', 'm300');
 
-const accent = accentArray('orange')
+const accent = accentArray('orange');
 // const accent = Object.values(material.orange.accent)
 
 export const colors = {
-  grey,
-  primary,
-  secondary,
-  tertiary,
-  accent,
+  primary: material.green.m300,
+  secondary: material.purple.m600,
+  tertiary: material.yellow.m300,
+  accent: material.orange.accent.a400,
 
   white: material.shades.white,
   offWhite: material.grey.m50,
@@ -35,7 +34,7 @@ export const colors = {
     secondary: material.grey.m900,
     background: material.grey.m900,
     surface: material.grey.m900,
-    error: material.grey.m50,
+    error: material.grey.m50
   },
 
   link: {
@@ -43,6 +42,6 @@ export const colors = {
     visited: material.purple.m600,
     hover: material.grey.m800,
     focus: material.grey.m800,
-    active: material.grey.m800,
-  },
-}
+    active: material.grey.m800
+  }
+};

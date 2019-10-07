@@ -1,12 +1,21 @@
-import styled from 'styled-components'
-import { color, fontSize, space } from 'styled-system'
+import styled, { css } from 'styled-components';
+import { color, fontSize, space } from 'styled-system';
+import { buttons } from '../../styles/variables/buttons';
+import { base } from '../../styles/helpers/system';
 
-import { button } from 'Variables'
+// TO REMOVE START
+import { button } from 'Variables';
+// TO REMOVE STOP
+
+// prettier-ignore
+const buttonSizeCSS = ({ tiny, small, medium, large }) => css`
+  ${tiny && `font-size: ${buttons.sizes.tiny};`}
+  ${small && `font-size: ${buttons.sizes.small};`}
+  ${medium && `font-size: ${buttons.sizes.medium};`}
+  ${large && `font-size: ${buttons.sizes.large};`}
+`;
 
 export const Button = styled('button')`
-  display: inline-flex;
-  align-items: center;
-  
   appearance: none;
 
   background-color: ${button.backgroundColor};
@@ -16,8 +25,11 @@ export const Button = styled('button')`
 
   color: ${button.color};
   cursor: pointer;
-  
-  font-size: ${button.fontSize};
+
+  display: inline-flex;
+  align-items: center;
+
+  font-size: ${buttons.sizes.base};
   font-weight: ${button.fontWeight};
 
   letter-spacing: 0.5px;
@@ -26,27 +38,27 @@ export const Button = styled('button')`
   min-width: 88px;
 
   outline: 0;
-  padding: .8em 1.5em .8em;
+  padding: 0.8em 1.5em 0.8em;
   position: relative;
-  
+
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
-  
+
   vertical-align: baseline;
   user-select: none;
 
   &:hover {
-    background-color: rgba(0,0,0,.5);
+    background-color: #111;
+    color: #fafafa;
   }
 
   ${({ disabled }) => disabled && `cursor: not-allowed;`}
 
-  ${color}
-  ${fontSize}
-  ${space}
-`
+  ${bass}
+  ${buttonSizeCSS}
+`;
 
 // ADD STYLES
-export const Buttons = styled.div``
+export const Buttons = styled.div``;
