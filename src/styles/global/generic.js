@@ -2,7 +2,12 @@ import { css } from "styled-components"
 
 // import { colors, fonts } from "Styles"
 import { colors } from "../variables/base/colors"
-import { fonts } from "../variables/base/typography"
+import {
+  fonts,
+  fontSizes,
+  fontWeights,
+  letterSpacing
+} from "../variables/base/typography"
 
 export const Generic = css`
   * {
@@ -20,7 +25,7 @@ export const Generic = css`
   html {
     background-color: ${colors.offWhite};
     box-sizing: border-box;
-    font-size: ${fonts.size.md};
+    font-size: ${fontSizes.html};
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     min-width: 300px;
@@ -45,14 +50,14 @@ export const Generic = css`
   input,
   select,
   textarea {
-    font-size: ${fonts.size.md};
+    font-size: ${fontSizes.base};
   }
 
   code,
   pre {
     -moz-osx-font-smoothing: auto;
     -webkit-font-smoothing: auto;
-    font-family: ${fonts.family.code};
+    font-family: ${fonts.code};
   }
 
   body {
@@ -60,7 +65,7 @@ export const Generic = css`
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.5;
-    font-family: ${fonts.family.roboto};
+    font-family: ${fonts.body};
   }
 
   a {
@@ -74,13 +79,13 @@ export const Generic = css`
   }
 
   a:hover {
-    color: ${colors.linHhover};
+    color: ${colors.hoverLink};
   }
 
   code {
     background-color: ${colors.light};
     color: ${colors.code};
-    font-size: ${fonts.size.sm};
+    font-size: ${fontSizes.small};
     font-weight: 400;
     padding: 0.25em 0.5em;
   }
@@ -104,7 +109,7 @@ export const Generic = css`
   }
 
   small {
-    font-size: ${fonts.size.sm};
+    font-size: ${fontSizes.small};
   }
 
   span {
@@ -150,50 +155,50 @@ export const Generic = css`
   }
 
   h1 {
-    font-size: ${fonts.size.xxxl};
-    font-weight: 300;
+    font-size: ${fontSizes.h1};
+    font-weight: ${fontWeights.h1};
     line-height: 1;
-    letter-spacing: ${fonts.spacing.closer};
-    font-family: ${fonts.family.roboto};
+    letter-spacing: ${letterSpacing.h1};
+    font-family: ${fonts.body};
   }
 
   h2 {
-    font-size: ${fonts.size.xxl};
-    font-weight: 400;
+    font-size: ${fontSizes.h2};
+    font-weight: ${fontWeights.h2};
     line-height: 1.35;
-    letter-spacing: ${fonts.spacing.close};
-    font-family: ${fonts.family.roboto};
+    letter-spacing: ${letterSpacing.h2};
+    font-family: ${fonts.body};
   }
 
   h3 {
-    font-size: ${fonts.size.xl};
-    font-weight: 500;
+    font-size: ${fontSizes.h3};
+    font-weight: ${fontWeights.h3};
     line-height: 48px;
-    letter-spacing: normal;
-    font-family: ${fonts.family.roboto};
+    letter-spacing: ${letterSpacing.h3};
+    font-family: ${fonts.body};
   }
 
   h4 {
-    font-size: lg;
-    font-weight: 500;
+    font-size: ${fontSizes.h4};
+    font-weight: ${fontWeights.h4};
     line-height: 40px;
-    letter-spacing: normal;
-    font-family: ${fonts.family.roboto};
+    letter-spacing: ${letterSpacing.h4};
+    font-family: ${fonts.body};
   }
 
   h5 {
-    font-size: md;
-    font-weight: 500;
+    font-size: ${fontSizes.h5};
+    font-weight: ${fontWeights.h5};
     line-height: 32px;
-    letter-spacing: normal;
-    font-family: ${fonts.family.roboto};
+    letter-spacing: ${letterSpacing.h5};
+    font-family: ${fonts.body};
   }
 
   h6 {
-    font-size: md;
-    font-weight: ${fonts.weight.bolder};
+    font-size: ${fontSizes.h6};
+    font-weight: ${fontWeights.h6};
     line-height: 1;
-    letter-spacing: ${fonts.spacing.wide};
-    font-family: ${fonts.family.roboto};
+    letter-spacing: ${letterSpacing.h6};
+    font-family: ${fonts.body};
   }
 `

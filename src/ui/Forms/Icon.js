@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import { FontAwesomeIcon as FaIcon } from 'FontAwesome'
+import React from "react"
+import styled from "styled-components"
+import { FontAwesomeIcon as FaIcon } from "FontAwesome"
 // import { Field as FormikField } from 'formik'
 
-import { IconBase } from 'UI'
-import { forms } from 'Styles'
+import { IconBase } from "UI"
+import { forms } from "Styles"
 
 const InputIconBase = styled(IconBase)`
   color: ${forms.icon.color};
@@ -18,8 +18,8 @@ const InputIconBase = styled(IconBase)`
 
   z-index: 4;
 
-  ${({ side }) => side === 'left' && `left: 0;`}
-  ${({ side }) => side === 'right' && `right: 0;`}
+  ${({ side }) => side === "left" && `left: 0;`}
+  ${({ side }) => side === "right" && `right: 0;`}
 `
 
 export const InputIcon = props => (
