@@ -1,13 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { ThemeProvider } from 'styled-components'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ThemeProvider } from 'styled-components';
 
 // import { FirebaseProvider } from 'Context'
-import { FormProvider } from 'Context'
-import GlobalCss from 'Global'
-import theme from 'Theme'
+import { FormProvider } from 'Context';
+import GlobalCss from 'Global';
+import theme from 'Theme';
 
-// import { iconLibrary } from 'Styles/icons'
+import { iconLibrary } from 'Styles/icons';
 
 export const BaseLayout = ({ children }) => {
   // const { firebase } = useContext(FirebaseContext)
@@ -22,9 +22,9 @@ export const BaseLayout = ({ children }) => {
       </ThemeProvider>
       <GlobalCss />
     </>
-  )
-}
+  );
+};
 
 BaseLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired
+};

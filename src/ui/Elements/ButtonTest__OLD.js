@@ -1,7 +1,6 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
 import { em, darken, lighten, math, readableColor as rc } from 'polished';
-import { shadow, space } from 'styled-system';
+import { shadow } from 'styled-system';
 import styledMap from 'styled-map';
 // import styledMap, { mapToTheme as theme } from 'styled-map';
 
@@ -9,7 +8,6 @@ import styledMap from 'styled-map';
 import { colors } from '../../styles/variables/colors';
 import { baseCSS } from '../../styles/helpers/system';
 import { colorProps, radiiProps } from '../../styles/maps';
-import { FontAwesomeIcon as FaIcon } from 'FontAwesome';
 
 const buttonSizes = styledMap`
     small: 0.75rem;
@@ -18,11 +16,7 @@ const buttonSizes = styledMap`
     large: 2.5rem;
 `;
 
-const Icon = styled(FaIcon)`
-  ${space}
-`;
-
-export const ButtonBase = styled('button')(
+export const Button = styled('button')(
   ({ icon, inverted, outline, rounded }) => css`
     appearance: none;
 
@@ -75,16 +69,16 @@ export const ButtonBase = styled('button')(
       
     ${icon &&
       css`
-        padding-right: 0.75em;
-        padding-left: 0.75em;
-
-        svg {
-          height: ${buttonSizes};
-          width: ${buttonSizes};
-        }
+        padding-right: .25em;
+        padding-left: .25em;
       `}
 
-
+    svg:first-child { margin-right: .75em; }
+    svg:last-child { margin-left: .75em; }
+    svg:only-child {
+      height: ${buttonSizes};
+      width: ${buttonSizes};
+    }
 
     
 
@@ -119,15 +113,106 @@ export const ButtonBase = styled('button')(
   `
 );
 
-export const Button = props => {
-  const { children, icon, iconLeft, iconRight } = props;
+export const Button2 = styled('button')(
+  ({ inverted, outline, rounded }) => css`
+  
+  appearance: none;
 
-  return (
-    <ButtonBase {...props}>
-      {iconLeft && <Icon icon={iconLeft} mr='0.75em' />}
-      {!icon && children}
-      {icon && <Icon icon={icon} />}
-      {iconRight && <Icon icon={iconRight} ml='0.75em' />}
-    </ButtonBase>
-  );
-};
+  border-style: solid;
+    border-width: 1px;
+
+
+    background-color: ${colorProps};
+    border-color: ${colorProps};
+    color: ${colors.white};
+      
+    &:hover {
+      background-color: ${props => darken(0.1, colorProps(props))};
+      color: #fafafa;
+    }
+
+  
+    ${outline &&
+      css`
+        background-color: transparent;
+        color: ${colorProps};
+      `}
+
+    ${inverted &&
+      css`
+        background-color: ${colors.white};
+        color: ${colorProps};
+      `}
+
+
+    border: 1px solid ${colors.primary};
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: 600;
+    letter-spacing: .03em;
+    min-width: 5.5em;
+    padding: 0.8em 1.5em;
+    transition: all 0.2s ease-in-out;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+
+
+  line-height: 1em;
+  min-height: 1em;
+
+  outline: 0;
+  position: relative;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+
+  vertical-align: baseline;
+  user-select: none;
+
+
+
+  ${baseCSS}
+  ${
+    '' /* ${theme('buttons.base')}
+  ${theme('buttons.kind', 'kind')}
+  ${theme('buttons.size')} */
+  }
+
+
+
+  ${({ disabled }) => disabled && `cursor: not-allowed;`}
+  ${inverted &&
+    outline &&
+    `
+    backgroundColor: transparent;
+    border-color: #fff;
+    color: #fff;
+  `}
+
+  ${rounded &&
+    `
+    border-radius: 290486px;
+  `}
+`
+);
+
+// ADD STYLES
+// export const Buttons = styled.div`
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   justify-content: center;
+
+//   :last-child {
+//     margin-bottom: -0.5rem;
+//   }
+
+//   ${Button} {
+//     ${theme('buttons.size')}
+//   }
+// `;

@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 
 import { colors, fonts } from 'Variables/'
 
-const Generic = css`
+export const Generic = css`
   * {
     background-repeat: no-repeat;
     box-sizing: inherit;
@@ -195,5 +195,3 @@ const Generic = css`
     font-family: ${fonts.family.roboto};
   }
 `
-
-export default Generic
