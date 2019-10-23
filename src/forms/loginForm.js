@@ -1,59 +1,68 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { navigate } from 'gatsby'
 import { Formik } from 'formik'
 import * as Yup from 'yup'
 
-// import { FormSetup as Form } from './form'
-
 import { firebase } from 'Classes'
-import { Form, Button, Email, Password, TextInput as Text } from 'UI'
+import { Form, Button, Email, Help, Password } from 'UI'
 
 export const LoginForm = () => {
-  const [authError, setAuthError] = useState(null)
-
-  async function authenticateUser(values) {
+  async function authenticateUser(values, setStatus, setSubmitting) {
     const { email, password } = values
+
+    setSubmitting(true)
 
     try {
       await firebase.login(email, password)
       navigate('/news', { replace: true })
     } catch (error) {
       console.log('Authentication Error: ', error)
-      setAuthError(error.message)
+      setStatus({
+        firebaseErrorMessage: error.message
+      })
+    } finally {
+      setSubmitting(false)
     }
   }
 
   return (
     <>
-      <h1>Form</h1>
       <Formik
         render={props => <RenderForm {...props} />}
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={async (values, { setSubmitting, resetForm }) => {
-          setSubmitting(true)
-          await authenticateUser(values)
+        onSubmit={async (values, { setStatus, setSubmitting, resetForm }) => {
           resetForm()
-          setSubmitting(false)
+          await authenticateUser(values, setStatus, setSubmitting)
         }}
       />
     </>
   )
 }
 
-const RenderForm = (authError, { isSubmitting, isValid }) => (
-  <Form>
-    <h3>Sign Up</h3>
-    <Text name="name" />
-    <Email name="email" />
-    <Password name="password" />
-    <Password name="confirmPassword" />
-    {authError && <p>{authError}</p>}
-    <Button disabled={!isValid || isSubmitting} type="submit">
-      Submit
-    </Button>
-  </Form>
-)
+const RenderForm = ({ handleSubmit, isSubmitting, isValid, status }) => {
+  console.log('status: ', status)
+  return (
+    <Form onSubmit={handleSubmit}>
+      <h3>Sign Up</h3>
+      <Email name='email' />
+      <Password name='password' />
+      {!!status && status.firebaseErrorMessage && (
+        <Help color='error' mt='-0.75em'>
+          {status.firebaseErrorMessage}
+        </Help>
+      )}
+      <Button
+        mt={5}
+        fullWidth
+        disabled={!isValid || isSubmitting}
+        type='submit'
+      >
+        Submit
+      </Button>
+    </Form>
+  )
+}
 
 const initialValues = {
   email: '',

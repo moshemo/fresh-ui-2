@@ -1,15 +1,16 @@
+import { borderWidths, radii } from './variables/base/borders'
+import { colors } from './variables/base/colors'
 import {
-  borderWidths,
-  buttons,
-  colors,
   fonts,
   fontSizes,
   fontWeights,
-  lineHeights,
-  radii,
-  shadows,
-  space
-} from "./index"
+  lineHeights
+} from './variables/base/typography'
+import { shadows } from './variables/base/shadows'
+import { sizes } from './variables/base/sizes'
+import { space } from './variables/base/space'
+
+import { buttons } from './variables/elements/buttons'
 
 // prettier-ignore
 export const theme = {
@@ -22,6 +23,7 @@ export const theme = {
   lineHeights,
   radii,
   shadows,
+  sizes,
   space,
   breakpoints: {
     tablet: '769px',
