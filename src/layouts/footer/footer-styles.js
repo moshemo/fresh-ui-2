@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { Text } from 'UI'
-import { colors } from 'Variables'
+import { colors } from 'Styles'
 
 export const FooterBase = styled.footer`
   display: flex;

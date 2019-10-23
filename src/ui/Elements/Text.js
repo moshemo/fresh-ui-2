@@ -1,18 +1,18 @@
-import styled, { css } from 'styled-components';
-import { color, space, system, typography } from 'styled-system';
+import styled, { css } from "styled-components"
+import { color, space, system, typography } from "styled-system"
 
-import { colors } from 'Variables';
+import { colors } from "Styles"
 
 const textStyles = system({
-  columns: { property: 'columns' },
-  columnCount: { property: 'columnCount' },
-  columnGap: { property: 'columnGap' },
-  columnWidth: { property: 'columnWidth' },
+  columns: { property: "columns" },
+  columnCount: { property: "columnCount" },
+  columnGap: { property: "columnGap" },
+  columnWidth: { property: "columnWidth" },
   textTransform: true,
   textDecoration: true,
   verticalAlign: true,
   whiteSpace: true
-});
+})
 
 const textStyles__OLD = ({
   capitalize,
@@ -50,7 +50,7 @@ const textStyles__OLD = ({
   ${color}
   ${space}
   ${typography}
-`;
+`
 
 export const Text = styled.div`
   color: ${colors.dark};
@@ -59,4 +59,4 @@ export const Text = styled.div`
   line-height: 1.3em;
 
   ${textStyles}
-`;
+`

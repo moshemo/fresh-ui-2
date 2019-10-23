@@ -1,14 +1,15 @@
-import styled from 'styled-components';
-import { color, flexbox, layout, space, system } from 'styled-system';
+import styled from "styled-components"
+import { baseCSS, box } from "Styles"
 
-// export const Box = styled.div`
-//   box-sizing: border-box;
-//   min-width: 0;
+export const Box = styled.div`
+  display: block;
+  min-width: 0;
 
-//   ${color}
-//   ${flexbox}
-//   ${layout}
-//   ${space}
-// `;
+  background-color: ${box.backgroundColor};
+  border-radius: ${box.borderRadius};
+  box-shadow: ${box.boxShadow};
+  color: ${box.color};
+  padding: ${box.padding};
 
-export const Box = styled('div')(color, flexbox, layout, space);
+  ${baseCSS}
+`

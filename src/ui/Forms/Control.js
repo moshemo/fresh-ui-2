@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { RegInput, FormikInput } from './Input'
 
 import { Button } from 'UI'
-import { forms } from 'Variables'
+import { forms } from 'Styles'
 
 console.log('RegInput: ', RegInput)
 console.log('Button: ', Button)

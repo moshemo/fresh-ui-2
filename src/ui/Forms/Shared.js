@@ -1,5 +1,5 @@
 import { css } from 'styled-components'
-import { colors, forms } from 'Variables'
+import { colors, forms } from 'Styles'
 
 export const SharedCSS = css`
   display: inline-flex;

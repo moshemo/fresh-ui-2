@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { color } from 'styled-system'
+import styled from "styled-components"
+import { color } from "styled-system"
 
-import { colors } from 'Variables'
+import { colors } from "Styles"
 
 export const ContentBase = styled.main`
   grid-area: main;

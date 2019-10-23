@@ -1,6 +1,6 @@
-import { css } from 'styled-components'
+import { css } from "styled-components"
 
-import { breakpoints } from 'Variables'
+import { breakpoints } from "Styles"
 
 /*** MEDIA QUERIES ***/
 // min-width

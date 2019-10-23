@@ -1,9 +1,9 @@
-import styled from 'styled-components'
-import { color, fontSize, space } from 'styled-system'
+import styled from "styled-components"
+import { color, fontSize, space } from "styled-system"
 
-import { button } from 'Variables'
+import { button } from "Styles"
 
-export const Button = styled('button')`
+export const Button = styled("button")`
   display: inline-flex;
   align-items: center;
   

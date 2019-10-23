@@ -9,10 +9,10 @@ import {
   radii,
   shadows,
   space
-} from "./variables/index";
+} from "./index"
 
 // prettier-ignore
-const theme = {
+export const theme = {
   borderWidths,
   buttons,
   colors,
@@ -34,7 +34,7 @@ const theme = {
   ],
 }
 
-theme.sizes.avatar = 48;
-theme.sizes.icon = 24;
+theme.sizes.avatar = 48
+theme.sizes.icon = 24
 
-export default theme;
+// export default theme;

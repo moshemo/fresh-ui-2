@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { DisabledCSS, SharedCSS } from './Shared'
-import { forms } from 'Variables'
+import { forms } from 'Styles'
 
 export const Textarea = styled.textarea`
   ${SharedCSS}

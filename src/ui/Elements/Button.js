@@ -1,28 +1,29 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { em, darken, lighten, math, readableColor as rc } from 'polished';
-import { shadow, space } from 'styled-system';
-import styledMap from 'styled-map';
+import React from "react"
+import styled, { css } from "styled-components"
+import { darken, readableColor as rc } from "polished"
+import { shadow, space } from "styled-system"
+import styledMap from "styled-map"
 // import styledMap, { mapToTheme as theme } from 'styled-map';
 
 // import { buttons } from '../../styles/variables/buttons';
-import { colors } from '../../styles/variables/colors';
-import { baseCSS } from '../../styles/helpers/system';
-import { colorProps, radiiProps } from '../../styles/maps';
-import { FontAwesomeIcon as FaIcon } from 'FontAwesome';
+import { baseCSS, colors, colorProps, radiiProps } from "Styles"
+// import { colors } from "../../styles/variables/colors"
+// import { baseCSS } from "../../styles/helpers/system"
+// import { colorProps, radiiProps } from "../../styles/maps"
+import { FontAwesomeIcon as FaIcon } from "FontAwesome"
 
 const buttonSizes = styledMap`
     small: 0.75rem;
     default: 1rem;
     medium: 1.75rem;
     large: 2.5rem;
-`;
+`
 
 const Icon = styled(FaIcon)`
   ${space}
-`;
+`
 
-export const ButtonBase = styled('button')(
+export const ButtonBase = styled("button")(
   ({ icon, inverted, outline, rounded }) => css`
     appearance: none;
 
@@ -49,7 +50,7 @@ export const ButtonBase = styled('button')(
     text-transform: uppercase;
 
     margin: 7px;
-    ${'' /* min-width: 5.5em;
+    ${"" /* min-width: 5.5em;
     min-height: 1em; */}
     padding: 0.8em 1.5em;
 
@@ -117,17 +118,17 @@ export const ButtonBase = styled('button')(
     ${baseCSS}
     ${shadow}
   `
-);
+)
 
 export const Button = props => {
-  const { children, icon, iconLeft, iconRight } = props;
+  const { children, icon, iconLeft, iconRight } = props
 
   return (
     <ButtonBase {...props}>
-      {iconLeft && <Icon icon={iconLeft} mr='0.75em' />}
+      {iconLeft && <Icon icon={iconLeft} mr="0.75em" />}
       {!icon && children}
       {icon && <Icon icon={icon} />}
-      {iconRight && <Icon icon={iconRight} ml='0.75em' />}
+      {iconRight && <Icon icon={iconRight} ml="0.75em" />}
     </ButtonBase>
-  );
-};
+  )
+}

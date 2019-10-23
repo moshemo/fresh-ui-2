@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { border, space } from 'styled-system'
+import styled from "styled-components"
+import { border, space } from "styled-system"
 
-import { colors } from 'Variables'
+import { colors } from "Styles"
 
 export const Divider = styled.hr`
     border: solid;
@@ -52,9 +52,9 @@ export const Divider = styled.hr`
 export const StyledDivider = styled.hr`
   border-top-color: ${props => props.color || colors.accentDark};
   border-top-style: solid;
-  border-top-width: ${props => props.thickness || '2'}px;
+  border-top-width: ${props => props.thickness || "2"}px;
 
-  height: ${props => props.height || '2'}px;
+  height: ${props => props.height || "2"}px;
   width: ${props => props.width || `100`}px;
 
   max-height: 10px;

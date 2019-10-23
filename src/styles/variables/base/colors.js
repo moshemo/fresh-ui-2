@@ -1,5 +1,6 @@
-import { material } from '../helpers/material-colors';
-import styledMap from 'styled-map';
+// import { material } from '../../helpers/material-colors';
+// import { material } from "Styles"
+import { material } from "../../helpers/material-colors"
 
 export const colors = {
   primary: material.blue.m700,
@@ -31,4 +32,4 @@ export const colors = {
   hoverLink: material.grey.m800,
   focusLink: material.grey.m800,
   activeLink: material.grey.m800
-};
+}

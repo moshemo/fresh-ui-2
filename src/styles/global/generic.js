@@ -1,6 +1,8 @@
-import { css } from 'styled-components'
+import { css } from "styled-components"
 
-import { colors, fonts } from 'Variables/'
+// import { colors, fonts } from "Styles"
+import { colors } from "../variables/base/colors"
+import { fonts } from "../variables/base/typography"
 
 export const Generic = css`
   * {
@@ -96,8 +98,8 @@ export const Generic = css`
     max-width: 100%;
   }
 
-  input[type='checkbox'],
-  input[type='radio'] {
+  input[type="checkbox"],
+  input[type="radio"] {
     vertical-align: baseline;
   }
 

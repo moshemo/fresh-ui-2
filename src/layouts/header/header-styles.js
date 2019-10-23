@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { Container } from 'UI'
-import { colors } from 'Variables'
+import { colors } from 'Styles'
 
 export const HeaderBase = styled.header`
   grid-area: header;

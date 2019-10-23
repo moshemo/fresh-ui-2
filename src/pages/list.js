@@ -2,7 +2,7 @@ import React from 'react'
 
 import { MainLayout } from 'Layouts'
 import { Card, CardTitle, List, ListItem, Start, End, Text } from 'UI'
-import { colors } from 'Variables'
+import { colors } from 'Styles'
 
 const ListPage = () => {
   return (

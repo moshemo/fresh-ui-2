@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { colors } from 'Variables'
+import { colors } from 'Styles'
 
 export const List = styled.ul`
   list-style-type: none;

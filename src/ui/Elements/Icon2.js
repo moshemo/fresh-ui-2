@@ -1,15 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
-import { color, space } from 'styled-system'
+import React from "react"
+import styled from "styled-components"
+import { color, space } from "styled-system"
 import {
   FaFacebookF as Facebook,
   FaTwitter as Twitter,
   FaYoutube as Youtube,
-  FaPinterest as Pinterest,
-} from 'react-icons/fa'
+  FaPinterest as Pinterest
+} from "react-icons/fa"
 
-import { brands } from 'Helpers/brands'
-import { colors } from 'Variables'
+import { brands } from "Helpers/brands"
+import { colors } from "Styles"
 
 const ScreenReader = styled.span`
   position: absolute;

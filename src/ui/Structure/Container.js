@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components'
-import { space } from 'styled-system'
+import styled, { css } from "styled-components"
+import { space } from "styled-system"
 
-import { breakpoints as bp } from 'Variables'
+import { breakpoints as bp } from "Styles"
 
 export const ContainerCSS = css`
   margin: 0 auto;

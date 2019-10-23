@@ -4,7 +4,7 @@ import { FontAwesomeIcon as FaIcon } from 'FontAwesome'
 // import { Field as FormikField } from 'formik'
 
 import { IconBase } from 'UI'
-import { forms } from 'Variables'
+import { forms } from 'Styles'
 
 const InputIconBase = styled(IconBase)`
   color: ${forms.icon.color};

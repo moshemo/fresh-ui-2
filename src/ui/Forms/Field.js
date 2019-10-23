@@ -5,7 +5,7 @@ import { Control } from './Control'
 // import { Label } from './Label'
 
 import { Button } from 'UI'
-import { forms } from 'Variables'
+import { forms } from 'Styles'
 
 /* prettier-ignore */
 export const Field = styled.div`

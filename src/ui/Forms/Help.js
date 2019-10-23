@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { ErrorMessage } from 'formik'
 
-import { colors } from 'Variables'
+import { colors } from 'Styles'
 
 // prettier-ignore
 const HelpCSS = css`

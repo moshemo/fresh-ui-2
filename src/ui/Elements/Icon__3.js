@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { color, space } from 'styled-system'
+import React from "react"
+import styled from "styled-components"
+import { color, space } from "styled-system"
 import {
   FaFacebookF as Facebook,
   FaFlickr as Flickr,
@@ -9,11 +9,11 @@ import {
   FaLinkedin as LinkedIn,
   FaPinterest as Pinterest,
   FaTwitter as Twitter,
-  FaYoutube as Youtube,
-} from 'react-icons/fa'
+  FaYoutube as Youtube
+} from "react-icons/fa"
 
-import { brands } from 'Helpers/brands'
-import { colors } from 'Variables'
+import { brands } from "Helpers/brands"
+import { colors } from "Styles"
 
 // -------------------------
 // Base Styles & Components

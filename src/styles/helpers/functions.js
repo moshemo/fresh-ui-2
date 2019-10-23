@@ -1,26 +1,27 @@
-import { material } from './material-colors';
-import { darken, lighten, readableColor } from 'polished';
-import { colors, colorPropsObj } from '../variables/colors';
+import { material } from "./material-colors"
+import { darken, lighten, readableColor } from "polished"
+// import { colors, colorPropsObj } from '../variables/colors';
+import { colors, colorPropsObj } from "../index"
 
 // Color Functions
-export const rc = color => readableColor(color, colors.dark, colors.light);
+export const rc = color => readableColor(color, colors.dark, colors.light)
 
 export const darkenColorProps = amount => {
-  let colorPropsDark = {};
+  let colorPropsDark = {}
 
   for (let colorProp in colorPropsObj) {
-    colorPropsDark[colorProp] = darken(amount, colorPropsObj[colorProp]);
+    colorPropsDark[colorProp] = darken(amount, colorPropsObj[colorProp])
   }
 
-  return colorPropsDark;
-};
+  return colorPropsDark
+}
 
 export const lightenColorProps = amount => {
-  let colorPropsLight = {};
+  let colorPropsLight = {}
 
   for (let colorProp in colorPropsObj) {
-    colorPropsLight[colorProp] = lighten(amount, colorPropsObj[colorProp]);
+    colorPropsLight[colorProp] = lighten(amount, colorPropsObj[colorProp])
   }
 
-  return colorPropsLight;
-};
+  return colorPropsLight
+}

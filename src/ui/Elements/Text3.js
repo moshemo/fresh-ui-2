@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components'
-import { space } from 'styled-system'
+import styled, { css } from "styled-components"
+import { space } from "styled-system"
 
-import { colors } from 'Variables'
+import { colors } from "Styles"
 
 const textStyles = css`
   ${props => props.white && `color: ${colors.white};`}
@@ -112,7 +112,7 @@ export const Text = styled.div`
     column-width: 340px;
     `}
 
-  ${props => props.columns === '3' && `column-count: 3;column-width: 240px;`}
+  ${props => props.columns === "3" && `column-count: 3;column-width: 240px;`}
 
 
 

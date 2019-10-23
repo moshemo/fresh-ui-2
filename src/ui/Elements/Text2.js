@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { color, space } from 'styled-system'
 
-import { breakpoints as bp, colors, fonts } from 'Variables'
+import { breakpoints as bp, colors, fonts } from 'Styles'
 
 export const Title = styled.h1`
   font-size: 50px;

@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { colors } from 'Variables'
+import { colors } from "Styles"
 
 // prettier-ignore
 export const IconBase = styled.span`

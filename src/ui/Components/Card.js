@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { space } from 'styled-system'
 
-import { colors } from 'Variables'
+import { colors } from 'Styles'
 
 export const Card = styled.div`
   background-color: ${colors.white};

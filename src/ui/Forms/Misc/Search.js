@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { colors } from 'Variables'
+import { colors } from 'Styles'
 
 import { MdSearch as SearchIcon } from 'react-icons/md'
 

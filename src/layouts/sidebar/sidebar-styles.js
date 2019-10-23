@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
-import { NavBase, NavLink, Text } from 'UI'
-import { colors } from 'Variables'
+import { NavBase, NavLink, Text } from "UI"
+import { colors } from "Styles"
 
 export const SidebarBase = styled.div`
   grid-area: sidebar;
@@ -11,9 +11,9 @@ export const SidebarBase = styled.div`
   grid-template-rows: 59px 1fr 40px;
 
   grid-template-areas:
-    'sidebar-top'
-    'sidebar-middle'
-    'sidebar-bottom';
+    "sidebar-top"
+    "sidebar-middle"
+    "sidebar-bottom";
 
   background-color: ${colors.secondaryDarker};
   color: ${colors.light};
