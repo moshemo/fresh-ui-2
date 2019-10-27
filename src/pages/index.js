@@ -1,8 +1,8 @@
-import React from 'react';
-import { MainLayout } from 'Layouts';
-import { Box, Text } from 'UI';
-import { Button } from 'UI';
-import { FontAwesomeIcon as FaIcon } from 'FontAwesome';
+import React from 'react'
+import { MainLayout } from 'Layouts'
+import { Box, Text } from 'UI'
+import { Button } from 'UI'
+import { FontAwesomeIcon as FaIcon } from 'FontAwesome'
 
 // import { buttons } from "../styles/variables/buttons";
 
@@ -12,17 +12,49 @@ const HomePage = () => {
   return (
     <MainLayout>
       <h1>Home</h1>
+      <Button secondary tablet={{ bg: 'accent' }}>
+        Tablet
+      </Button>
 
-      <Button>Default</Button>
+      <br />
+
+      <Button accent tablet={{ style: 'secondary' }}>
+        Tablet 2
+      </Button>
+
+      <br />
+
+      <Button secondary tablet={{ style: 'accent' }}>
+        Tablet 3
+      </Button>
+
+      <br />
+
+      <Button accent tablet={{ style: '#abcdef' }}>
+        Tablet 4
+      </Button>
+
+      <br />
+
+      <Button secondary tablet={{ style: '#121212' }}>
+        Tablet 5
+      </Button>
+
+      <br />
+
+      <Button desktop={{ bg: 'orange' }}>Desktop</Button>
+      <Button widescreen={{ bg: 'green' }}>Widescreen</Button>
       <Button iconLeft='envelope'>Save</Button>
       <Button iconRight='check' secondary>
         Save
       </Button>
       <Button icon='check' />
+      <Button icon='envelope' xsmall />
       <Button icon='envelope' small />
       <Button icon='envelope' medium />
       <Button icon='envelope' medium accent />
       <Button icon='envelope' large />
+      <Button icon='envelope' xlarge />
       {/* <Button icon>
         <FaIcon icon='envelope' />
       </Button>
@@ -191,7 +223,7 @@ const HomePage = () => {
         </Text>
       </Box>
     </MainLayout>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

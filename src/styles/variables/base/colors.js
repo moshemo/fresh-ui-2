@@ -1,6 +1,4 @@
-// import { material } from '../../helpers/material-colors';
-// import { material } from "Styles"
-import { material } from "../../helpers/material-colors"
+import { material } from '../../helpers/material-colors'
 
 export const colors = {
   primary: material.blue.m700,

@@ -1,30 +1,30 @@
 import React from 'react'
+
 import styled, { css } from 'styled-components'
 import { darken, readableColor as rc } from 'polished'
-import { shadow, space } from 'styled-system'
+import { space } from 'styled-system'
 import styledMap from 'styled-map'
-// import styledMap, { mapToTheme as theme } from 'styled-map';
 
-// import { buttons } from '../../styles/variables/buttons';
-import { baseCSS, colors, colorProps, radiiProps } from 'Styles'
-// import { colors } from "../../styles/variables/colors"
-// import { baseCSS } from "../../styles/helpers/system"
-// import { colorProps, radiiProps } from "../../styles/maps"
+import { baseCSS, buttons, colors, colorProps, radii, radiiProps } from 'Styles'
 import { FontAwesomeIcon as FaIcon } from 'FontAwesome'
 
-const buttonSizes = styledMap`
-    small: 0.75rem;
-    default: 1rem;
-    medium: 1.75rem;
-    large: 2.5rem;
-`
+// const buttonSizes = styledMap(buttons.sizes)
 
 const Icon = styled(FaIcon)`
   ${space}
 `
 
 export const ButtonBase = styled('button')(
-  ({ fullwidth, fullWidth, icon, inverted, outline, rounded }) => css`
+  ({
+    fullwidth,
+    fullWidth,
+    icon,
+    inverted,
+    outline,
+    tablet,
+    desktop,
+    widescreen
+  }) => css`
     appearance: none;
 
     background-color: ${colorProps};
@@ -41,7 +41,7 @@ export const ButtonBase = styled('button')(
     justify-content: center;
     position: relative;
 
-    font-size: ${buttonSizes};
+    font-size: ${styledMap(buttons.sizes)};
     font-weight: 600;
     letter-spacing: 0.03em;
     line-height: 1em;
@@ -82,8 +82,8 @@ export const ButtonBase = styled('button')(
         padding-left: 0.75em;
 
         svg {
-          height: ${buttonSizes};
-          width: ${buttonSizes};
+          height: ${styledMap(buttons.sizes)};
+          width: ${styledMap(buttons.sizes)};
         }
       `}
 
@@ -115,10 +115,16 @@ export const ButtonBase = styled('button')(
         }
       `}
 
-
+  ${tablet &&
+    css`
+      @media (max-width: 768px) {
+        background-color: ${colors[tablet.style] || tablet.style};
+        border: ${colors[tablet.style] || tablet.style};
+        border-radius: ${radii[tablet.radius] || tablet.radius};
+        color: ${tablet.style && rc(colors[tablet.style] || tablet.style)};
+    `}
 
     ${baseCSS}
-    ${shadow}
   `
 )
 

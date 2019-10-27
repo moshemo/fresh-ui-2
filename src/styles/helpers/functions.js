@@ -1,7 +1,7 @@
-import { material } from "./material-colors"
-import { darken, lighten, readableColor } from "polished"
+import { material } from './material-colors'
+import { darken, lighten, readableColor } from 'polished'
 // import { colors, colorPropsObj } from '../variables/colors';
-import { colors, colorPropsObj } from "../index"
+import { colors, colorPropsObj } from '../index'
 
 // Color Functions
 export const rc = color => readableColor(color, colors.dark, colors.light)
@@ -25,3 +25,11 @@ export const lightenColorProps = amount => {
 
   return colorPropsLight
 }
+
+// export const mediaProps = (query, obj) => {
+//   let colorKeys = Object.keys(obj)
+//   let colorValues = Object.values(obj)
+
+//   let query = console.log('colorKeys: ', colorKeys)
+//   console.log('colorValues: ', colorValues)
+// }

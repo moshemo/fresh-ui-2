@@ -1,10 +1,10 @@
-import styledMap from "styled-map"
+import styledMap from 'styled-map'
 
-import { colors } from "./variables/base/colors"
-import { radii } from "./variables/base/borders"
+import { colors } from './variables/base/colors'
+import { radii } from './variables/base/borders'
 
 // colors
-const colorPropsObj = {
+export const colorPropsObj = {
   ...colors,
   default: colors.primary
 }
